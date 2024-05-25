@@ -3,6 +3,7 @@
 
 Inspired by [dbisu's pico-ducky project](https://github.com/dbisu/pico-ducky). I decided pick up a [Raspberry Pi Pico W](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html) myself to experiment and play around with some of the ducky possiblities. I also added a CLI for the already existing web interface made by [dbisu](https://github.com/dbisu/pico-ducky).
 
+### Use this tool and payloads to automate stuff and only for LEGAL purposes! Never target anyone if they DIDN'T give you permission as it is !!!ILLEGAL!!!
 
 ## Tools needed
 
