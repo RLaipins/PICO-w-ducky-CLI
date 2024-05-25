@@ -1,1 +1,1 @@
-# pico-ducky-wifi-cli
+# Pico ducky with CLI over WiFi
