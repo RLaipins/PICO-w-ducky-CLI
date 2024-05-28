@@ -22,9 +22,10 @@ Needed for this project:
 2. Plug in Raspberry Pico W to your computer and drag ```adafruit-circuitpython-raspberry_pi_pico_w-en_US-8.0.0.uf2``` into ```RPI-RP2``` and wait till it reboots
 3. Copy over these files: ```code.py```  ```boot.py```  ```duckyinpython.py```  ```secrets.py```  ```webapp.py```  ```wsgiserver.py``` and  ```lib``` folder from ``` Pico W Release```  folder
 4. Create new payloads or use existing ones
-5. (CAREFUL - if you have named script as ```payload1.dd```  it will run automatically after plugging in) Unplug and plug in again the Pico W 
-6. You can now connect to ```TestAP``` WiFi access point and use CLI script [```CLI_4_web_ducky.py```](https://github.com/fortijs40/PICO-w-ducky-CLI/releases/download/Release_v1.0/CLI_4_web_ducky.py) for controlling the ducky remotely.
-7. Don't do anything illegal and have fun automating stuff.
+5. !!! ```secrets.py``` Contain wifi login and password for Pico W access point. You can change this or leave as is, but remember the login details.
+6. (CAREFUL - if you have created and named script as ```payload1.dd```  it will run automatically after plugging in) Unplug and plug in again the Pico W 
+7. You can now connect to ```TestAP``` WiFi access point and use CLI script [```CLI_4_web_ducky.py```](https://github.com/fortijs40/PICO-w-ducky-CLI/releases/download/Release_v1.0/CLI_4_web_ducky.py) for controlling the ducky remotely.
+8. Don't do anything illegal and have fun automating stuff.
 ## Modifying ducky after setting it up
 
 After setting everything up you might want to access the ducky again as mass storage device.
