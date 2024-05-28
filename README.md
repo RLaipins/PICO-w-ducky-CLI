@@ -5,7 +5,9 @@ Inspired by [dbisu's pico-ducky project](https://github.com/dbisu/pico-ducky). I
 
 ### Use this tool and payloads to automate stuff and only for LEGAL purposes! Never target anyone if they DIDN'T give you permission as it is !!!ILLEGAL!!!
 
-[![Video for setup](https://i9.ytimg.com/vi_webp/lyKdfkOQVTs/mqdefault.webp?v=6655ca1f&sqp=CMyj17IG&rs=AOn4CLCRTi9Oo5-ROu2tJcJXTyIGKNp3BA)](https://www.youtube.com/watch?v=lyKdfkOQVTs)
+
+https://github.com/fortijs40/PICO-w-ducky-CLI/assets/59094867/9d7aed21-3bb4-4a99-95fe-eb1a02646be1
+
 
 ## Tools needed
 
